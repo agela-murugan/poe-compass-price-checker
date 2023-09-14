@@ -92,7 +92,7 @@ const CompassDetailsInput = (props) => {
                         rows={6}
                         onChange={(e) => setCompassesInfo(e.target.value)}
                         value={compassesInfo}
-                        style={{ backgroundColor: "black", color: "white" }}
+                        style={{ backgroundColor: "transparent", color: "white" }}
                     />
                 </Form.Group>
                 <br />

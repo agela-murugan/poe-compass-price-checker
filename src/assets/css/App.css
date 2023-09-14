@@ -1,23 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap");
+
 .background {
     background-image: url("../images/wallpaper.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 50vh;
+    height: 100vh;
 }
 
-.heading {
+.title {
     text-align: center;
     color: white;
     position: relative;
-    top: 60% !important;
-    font-size: 60px;
+    font-size: 40px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    font-family: 'Playfair Display SC', serif;
+    font-weight: 1000
 }
 
 .body {
-    background-color: #030406;
+    background-color: transparent;
+    font-family: 'Playfair Display SC', serif;
 }
 
 .textarea-label {
@@ -27,4 +31,12 @@
 
 .button-group {
     text-align: center;
+}
+
+.overlay {
+    background-color: rgba(3, 4, 6, 0.8);
+    position: relative;
+    top: 10%;
+    border-radius: 20px;
+    padding: 40px;
 }
