@@ -1,0 +1,30 @@
+.background {
+    background-image: url("../images/wallpaper.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh;
+}
+
+.heading {
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 60% !important;
+    font-size: 60px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+}
+
+.body {
+    background-color: #030406;
+}
+
+.textarea-label {
+    color: white;
+    font-size: 20px;
+}
+
+.button-group {
+    text-align: center;
+}
