@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Container, Form } from "react-bootstrap";
+import { Button, Container, Form, Row } from "react-bootstrap";
 
 const CompassDetailsInput = (props) => {
     const { getCompassDetails } = props;
@@ -92,22 +92,36 @@ const CompassDetailsInput = (props) => {
                         rows={6}
                         onChange={(e) => setCompassesInfo(e.target.value)}
                         value={compassesInfo}
-                        style={{ backgroundColor: "transparent", color: "white" }}
+                        style={{
+                            backgroundColor: "#201F1D",
+                            color: "white",
+                            borderColor: "transparent",
+                            fontSize: "18px",
+                        }}
                     />
                 </Form.Group>
                 <br />
+
                 <div className="button-group">
                     <Button
                         onClick={onClick}
-                        variant="success"
-                        style={{ width: "150px", borderRadius: 0 }}
+                        style={{
+                            width: "8rem",
+                            backgroundColor: "#315D80",
+                            borderColor: "transparent",
+                            margin: "auto 15px",
+                        }}
                     >
                         Submit
                     </Button>
                     <Button
                         onClick={clearShit}
-                        variant="danger"
-                        style={{ width: "150px", borderRadius: 0 }}
+                        style={{
+                            width: "8rem",
+                            backgroundColor: "#1F3C51",
+                            borderColor: "transparent",
+                            margin: "auto 15px",
+                        }}
                     >
                         Clear
                     </Button>

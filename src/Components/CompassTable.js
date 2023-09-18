@@ -21,7 +21,6 @@ const CompassTable = (props) => {
                 );
             });
 
-
             if (filterText) {
                 const newCompasses = compassesInfo.filter(
                     (compass) =>
@@ -44,7 +43,7 @@ const CompassTable = (props) => {
             }
 
             return (
-                <Table bordered hover variant="dark">
+                <Table bordered hover variant="dark" style={{fontSize: "20px"}}>
                     <thead>
                         <tr>
                             <th>No.</th>
@@ -62,13 +61,30 @@ const CompassTable = (props) => {
     return (
         <>
             <InputGroup>
-                <InputGroup.Text>Search something</InputGroup.Text>
+                <InputGroup.Text
+                    style={{
+                        backgroundColor: "#162C3B",
+                        color: "white",
+                        borderColor: "transparent",
+                        padding: "15px",
+                        fontSize: "24px",
+                    }}
+                >
+                    Search something
+                </InputGroup.Text>
                 <Form.Control
+                    style={{
+                        backgroundColor: "#201F1D",
+                        color: "white",
+                        borderColor: "transparent",
+                        fontSize: "20px",
+                    }}
                     onChange={(e) =>
                         setFilterText(e.target.value.toLowerCase())
                     }
                 />
             </InputGroup>
+            <br />
             {renderCompassTable()}
         </>
     );

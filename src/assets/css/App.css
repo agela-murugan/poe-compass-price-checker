@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Playfair+Display+SC:wght@900&display=swap");
+
 .background {
     background-image: url("../images/wallpaper.png");
     background-color: black;
@@ -12,18 +14,14 @@
     text-align: center;
     color: white;
     position: relative;
-    font-size: 40px;
+    font-size: 4rem;
+    font-weight: 900;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
-    font-weight: 1000;
-}
-
-.body {
-    background-color: transparent;
 }
 
 .textarea-label {
     color: white;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .button-group {
@@ -36,4 +34,8 @@
     position: relative;
     border-radius: 20px;
     padding: 100px 180px;
+}
+
+#root {
+    font-family: "Marcellus SC", serif;
 }
