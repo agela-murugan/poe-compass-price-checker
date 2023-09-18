@@ -1,11 +1,15 @@
-import { Table } from "react-bootstrap";
+import { useState } from "react";
+import { Form, InputGroup, Table } from "react-bootstrap";
 
 const CompassTable = (props) => {
     const { compassesInfo } = props;
 
+    const [filterText, setFilterText] = useState("");
+
     const renderCompassTable = () => {
+        let tableToRender = [];
         if (compassesInfo.length) {
-            const toRender = compassesInfo.map((compass, index) => {
+            const compassTable = compassesInfo.map((compass, index) => {
                 return (
                     <tr key={index + 1}>
                         <th>{index + 1}</th>
@@ -16,6 +20,29 @@ const CompassTable = (props) => {
                     </tr>
                 );
             });
+
+
+            if (filterText) {
+                const newCompasses = compassesInfo.filter(
+                    (compass) =>
+                        compass.compassName.toLowerCase().indexOf(filterText) >
+                        -1
+                );
+                tableToRender = newCompasses.map((compass, index) => {
+                    return (
+                        <tr key={index + 1}>
+                            <th>{index + 1}</th>
+                            <td>{compass.compassName}</td>
+                            <td>{compass.individualPrice}</td>
+                            <td>{compass.quantity}</td>
+                            <td>{compass.bulkPrice}</td>
+                        </tr>
+                    );
+                });
+            } else {
+                tableToRender = compassTable;
+            }
+
             return (
                 <Table bordered hover variant="dark">
                     <thead>
@@ -27,12 +54,24 @@ const CompassTable = (props) => {
                             <td>Bulk Price</td>
                         </tr>
                     </thead>
-                    <tbody>{toRender}</tbody>
+                    <tbody>{tableToRender}</tbody>
                 </Table>
             );
         }
     };
-    return <>{renderCompassTable()}</>;
+    return (
+        <>
+            <InputGroup>
+                <InputGroup.Text>Search something</InputGroup.Text>
+                <Form.Control
+                    onChange={(e) =>
+                        setFilterText(e.target.value.toLowerCase())
+                    }
+                />
+            </InputGroup>
+            {renderCompassTable()}
+        </>
+    );
 };
 
 export default CompassTable;
