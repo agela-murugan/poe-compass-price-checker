@@ -1,4 +1,4 @@
-import { Container, Table } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 
 const CompassTable = (props) => {
     const { compassesInfo } = props;
@@ -32,7 +32,7 @@ const CompassTable = (props) => {
             );
         }
     };
-    return <Container>{renderCompassTable()}</Container>;
+    return <>{renderCompassTable()}</>;
 };
 
 export default CompassTable;

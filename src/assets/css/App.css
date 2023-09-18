@@ -1,12 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap");
-
 .background {
     background-image: url("../images/wallpaper.png");
+    background-color: black;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .title {
@@ -15,13 +14,11 @@
     position: relative;
     font-size: 40px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
-    font-family: 'Playfair Display SC', serif;
-    font-weight: 1000
+    font-weight: 1000;
 }
 
 .body {
     background-color: transparent;
-    font-family: 'Playfair Display SC', serif;
 }
 
 .textarea-label {
@@ -34,9 +31,9 @@
 }
 
 .overlay {
-    background-color: rgba(3, 4, 6, 0.8);
+    background-color: rgba(3, 4, 6, 0.6);
+    min-height: 100vh;
     position: relative;
-    top: 10%;
     border-radius: 20px;
-    padding: 40px;
+    padding: 100px 180px;
 }
