@@ -1,14 +1,15 @@
-import { useState } from "react";
+import React, { useState } from "react";
+
 import { Button, Container, Form } from "react-bootstrap";
 import {
     CLEAR_BUTTON_TEXT,
     SUBMIT_BUTTON_TEXT,
-    TEXT_AREA_LABEL,
+    TEXT_AREA_LABEL
 } from "../constants";
 import {
     clearButtonStyle,
     submitButtonStyle,
-    textAreaStyle,
+    textAreaStyle
 } from "../assets/Styles";
 
 const CompassDetailsInput = (props) => {
@@ -75,7 +76,7 @@ const CompassDetailsInput = (props) => {
                     compassName,
                     quantity,
                     bulkPrice,
-                    individualPrice,
+                    individualPrice
                 };
             });
             getCompassDetails(formattedCompassesData);

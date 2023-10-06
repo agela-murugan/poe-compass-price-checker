@@ -1,11 +1,11 @@
 import "../assets/css/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useState } from "react";
+import React, { useState } from "react";
 import CompassDetailsInput from "../Components/CompassDetailsInput";
 import CompassTable from "../Components/CompassTable";
 import { HEADING } from "../constants";
 
-function App() {
+function App () {
     const [compassesInfo, setCompassesInfo] = useState([]);
 
     const getCompassDetails = (details) => {

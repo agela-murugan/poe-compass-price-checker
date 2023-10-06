@@ -1,11 +1,12 @@
-import { useState } from "react";
+import React, { useState } from "react";
+
 import { Form, FormControl, InputGroup, Table } from "react-bootstrap";
 import { COMPASS_TABLE_HEADERS, DIVINE_PRICE, SEARCH_TEXT } from "../constants";
 import {
     compassTableStyle,
     quantityInputFieldStyle,
     searchBoxStyle,
-    searchTextStyle,
+    searchTextStyle
 } from "../assets/Styles";
 
 const CompassTable = (props) => {
