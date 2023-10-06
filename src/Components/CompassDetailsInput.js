@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Container, Form, Row } from "react-bootstrap";
+import { Button, Container, Form } from "react-bootstrap";
 
 const CompassDetailsInput = (props) => {
     const { getCompassDetails } = props;
@@ -68,7 +68,6 @@ const CompassDetailsInput = (props) => {
                     individualPrice,
                 };
             });
-            console.log("formattedCompassesData: ", formattedCompassesData);
             getCompassDetails(formattedCompassesData);
         }
     };
