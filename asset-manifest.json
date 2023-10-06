@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/poe-compass-price-checker/static/css/main.9d33ff64.css",
-    "main.js": "/poe-compass-price-checker/static/js/main.8c848573.js",
+    "main.js": "/poe-compass-price-checker/static/js/main.de61b826.js",
     "static/media/wallpaper.png": "/poe-compass-price-checker/static/media/wallpaper.29aebf961fb3cb42d7dc.png",
     "index.html": "/poe-compass-price-checker/index.html",
     "main.9d33ff64.css.map": "/poe-compass-price-checker/static/css/main.9d33ff64.css.map",
-    "main.8c848573.js.map": "/poe-compass-price-checker/static/js/main.8c848573.js.map"
+    "main.de61b826.js.map": "/poe-compass-price-checker/static/js/main.de61b826.js.map"
   },
   "entrypoints": [
     "static/css/main.9d33ff64.css",
-    "static/js/main.8c848573.js"
+    "static/js/main.de61b826.js"
   ]
 }
