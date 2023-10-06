@@ -1,5 +1,15 @@
 import { useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
+import {
+    CLEAR_BUTTON_TEXT,
+    SUBMIT_BUTTON_TEXT,
+    TEXT_AREA_LABEL,
+} from "../constants";
+import {
+    clearButtonStyle,
+    submitButtonStyle,
+    textAreaStyle,
+} from "../assets/Styles";
 
 const CompassDetailsInput = (props) => {
     const { getCompassDetails } = props;
@@ -72,7 +82,7 @@ const CompassDetailsInput = (props) => {
         }
     };
 
-    const clearShit = () => {
+    const clearTextArea = () => {
         setCompassesInfo("");
         getCompassDetails("");
     };
@@ -84,45 +94,24 @@ const CompassDetailsInput = (props) => {
             <Form>
                 <Form.Group>
                     <Form.Label className="textarea-label">
-                        Paste your text from PoE Stack:
+                        {TEXT_AREA_LABEL}
                     </Form.Label>
                     <Form.Control
                         as="textarea"
                         rows={6}
                         onChange={(e) => setCompassesInfo(e.target.value)}
                         value={compassesInfo}
-                        style={{
-                            backgroundColor: "#201F1D",
-                            color: "white",
-                            borderColor: "transparent",
-                            fontSize: "18px",
-                        }}
+                        style={textAreaStyle}
                     />
                 </Form.Group>
                 <br />
 
                 <div className="button-group">
-                    <Button
-                        onClick={onClick}
-                        style={{
-                            width: "8rem",
-                            backgroundColor: "#315D80",
-                            borderColor: "transparent",
-                            margin: "auto 15px",
-                        }}
-                    >
-                        Submit
+                    <Button onClick={onClick} style={submitButtonStyle}>
+                        {SUBMIT_BUTTON_TEXT}
                     </Button>
-                    <Button
-                        onClick={clearShit}
-                        style={{
-                            width: "8rem",
-                            backgroundColor: "#1F3C51",
-                            borderColor: "transparent",
-                            margin: "auto 15px",
-                        }}
-                    >
-                        Clear
+                    <Button onClick={clearTextArea} style={clearButtonStyle}>
+                        {CLEAR_BUTTON_TEXT}
                     </Button>
                 </div>
             </Form>

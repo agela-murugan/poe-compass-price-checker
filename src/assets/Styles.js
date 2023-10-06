@@ -19,3 +19,24 @@ export const quantityInputFieldStyle = {
 };
 
 export const compassTableStyle = { fontSize: "20px" };
+
+export const textAreaStyle = {
+    backgroundColor: "#201F1D",
+    color: "white",
+    borderColor: "transparent",
+    fontSize: "18px",
+};
+
+export const submitButtonStyle = {
+    width: "8rem",
+    backgroundColor: "#315D80",
+    borderColor: "transparent",
+    margin: "auto 15px",
+};
+
+export const clearButtonStyle = {
+    width: "8rem",
+    backgroundColor: "#1F3C51",
+    borderColor: "transparent",
+    margin: "auto 15px",
+};
